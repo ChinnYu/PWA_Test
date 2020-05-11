@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入了引用程序清單文件-->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="index.css">
+    <!--<script src="ui.js"></script>-->
+</head>
+<body>
+    <h1>hello pwa</h1>
+    <script>
+        window.addEventListener('load', async ()=>{
+            if ('serviceWorker' in navigator){
+                try {
+                    const registration = await navigator.serviceWorker.register('sw.js',{scope:'/PWA/test/'});
+                    console.log('註冊成功',registration.scope);
+                }catch (e) {
+                    console.log('註冊失敗');
+                }
+            }
+
+            navigator.serviceWorker.oncontrollerchange = function (event) {
+                console.log("頁面已更新");
+            };
+
+            if (!navigator.onLine){
+                console.log("網路已斷開");
+                window.addEventListener("online", function () {
+                   console.log("網路已連接，刷新獲取內容")
+                });
+            }
+        });
+    </script>
+</body>
+</html>

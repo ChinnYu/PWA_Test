@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    fetch('./data.json').then(res=>{
+        //res 是請求得到的響應內容，二進制的流
+        //調用res.json()方法，可以把數據變成json格式，讀取的是一個json，返回的也是一個promise
+        return res.json();
+    }).then(data => {console.log(data)});
+</script>
+</body>
+</html>

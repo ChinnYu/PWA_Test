@@ -1,0 +1,14 @@
+{
+  "name": "Cylstorm-PWA",
+  "short_name": "Cylstorm",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "skyblue",
+  "description": "A simply readable Hacker News app.",
+  "icons": [{
+    "src": "images/capo.jpg",
+    "sizes": "144x144",
+    "type": "image/jpeg"
+  }],
+  "theme_color": "yellow"
+}

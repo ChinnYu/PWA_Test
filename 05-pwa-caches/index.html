@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入了引用程序清單文件-->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>hello pwa</h1>
+    <script>
+        window.addEventListener('load', async ()=>{
+            if ('serviceWorker' in navigator){
+                try {
+                    const registration = await navigator.serviceWorker.register('sw.js',{scope:'/PWA/05-pwa-caches/'});
+                    console.log('註冊成功',registration.scope);
+                }catch (e) {
+                    console.log('註冊失敗');
+                }
+
+            }
+        });
+    </script>
+</body>
+</html>
