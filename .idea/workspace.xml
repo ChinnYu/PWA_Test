@@ -11,7 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="597db51c-ede4-4f50-b10b-cab37c35b28e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PWA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PWA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diaryPwa/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/diaryPwa/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diaryPwa/public/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/diaryPwa/public/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diaryPwa/public/src/js/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/diaryPwa/public/src/js/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lavas/core/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/lavas/core/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lavas/core/Skeleton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/lavas/core/Skeleton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lavas/static/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/lavas/static/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -38,8 +46,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lavas/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/diaryPwa/public/aboutUs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -47,14 +56,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PWA\diaryPwa\public" />
       <recent name="C:\xampp\htdocs\PWA\lavas\pages\second" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PWA\diaryPwa\public\aboutUs" />
       <recent name="C:\xampp\htdocs\PWA\lavas\assets" />
       <recent name="C:\xampp\htdocs\PWA\lavas\pages\Fourth" />
       <recent name="C:\xampp\htdocs\PWA\test" />
       <recent name="C:\xampp\htdocs\PWA\05-pwa-caches" />
-      <recent name="C:\xampp\htdocs\PWA" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -69,7 +79,7 @@
       <updated>1589122401083</updated>
       <workItem from="1589122402392" duration="15998000" />
       <workItem from="1589239854859" duration="534000" />
-      <workItem from="1589240679159" duration="11600000" />
+      <workItem from="1589240679159" duration="32198000" />
     </task>
     <servers />
   </component>

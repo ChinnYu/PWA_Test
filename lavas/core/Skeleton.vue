@@ -21,6 +21,12 @@ export default {
     100%
         transform skew(-20deg) translateX(70px)
 
+@keyframes img-rotate
+    0%
+        transform rotate(0)
+    100%
+        transform rotate(360deg)
+
 .skeleton-wrapper
     img
         width 96px
@@ -29,6 +35,8 @@ export default {
         top 50%
         left 50%
         margin -48px 0 0 -48px
+        animation 1s img-rotate infinite
+        transform-origin 50% 50%
 
     .toplight
         width 20px

@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <div class="app-navbar"></div>
         <transition
             :name="pageTransitionEffect"
             @before-enter="handleBeforeEnter"
@@ -123,9 +124,18 @@ $page-transition-duration = 0.35s
     color #2c3e50
     height 100%
 
-    .app-view
+    .app-navbar
         position absolute
         top 0
+        width 100%
+        left 0
+        right 0
+        height 64px
+        background #0d47a1
+
+    .app-view
+        position absolute
+        top 64px
         right 0
         bottom 0
         left 0

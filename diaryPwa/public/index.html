@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-red.min.css" />
     <link rel="icon" sizes="48x48" href="favicon.ico">  
     <link rel="stylesheet" href="./src/css/app.css">
-    
+    <link rel="apple-touch-icon" href="src/images/icons/demo-icon48.png" sizes="48x48">
+    <link rel="apple-touch-icon" href="src/images/icons/demo-icon72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="src/images/icons/demo-icon96.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="src/images/icons/demo-icon144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="src/images/icons/demo-icon168.png" sizes="168x168">
+    <link rel="apple-touch-icon" href="src/images/icons/demo-icon192.png" sizes="192x192">
 </head>
 <body>
     <div id="app">
@@ -31,16 +36,20 @@
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Title</span>
                 <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="aboutUs/about.html">about</a>
                 <a class="mdl-navigation__link" href="">Link</a>
                 </nav>
             </div>
             <main class="mdl-layout__content">
                 <div id="create-post-form">
-                    <form>
+                    <form id="form__article">
                         <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="title">
-                            <label class="mdl-textfield__label" for="title" name="title">標題</label>
+                            <label class="mdl-textfield__label" for="title" name="title">主題</label>
+                        </div>
+                        <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="post-location">
+                            <input class="mdl-textfield__input" type="text" id="location">
+                            <label class="mdl-textfield__label" for="location" name="location">地點</label>
                         </div>
                         <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="post-content">
                             <input class="mdl-textfield__input" type="text" id="content">
@@ -55,7 +64,7 @@
                         <br>
                         <div>
                             <button class="mdl-button mdl-js-button mdl-button--fab" id="close-modal-btn" type="button">
-                            <i class="material-icons">close</i>
+                                <i class="material-icons">close</i>
                             </button>
                         </div>
                     </form>
@@ -63,17 +72,54 @@
 
                 <img src="src/images/demo.jpg" class="main-image" alt="台北">
                 <div class="page-content">內容</div>
+                <div id="shared-moments"></div>
                     <div class="add-button">
                         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
                                 id="add-post-btn">
                             <i class="material-icons">add</i>
                         </button>
                     </div>
+                <div id="confirmation-toast" aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+                    <div class="mdl-snackbar__text"></div>
+                    <button type="button" class="mdl-snackbar__action"></button>
+                </div>
             </main>
         </div>
     </div>
+    <script src="./src/js/idb.js"></script>
+    <script src="./src/js/indexedDB.js"></script>
     <script src="./src/js/app.js"></script>    
     <script src="./src/js/post.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script>
+        window.addEventListener('beforeinstallprompt', function(e) {
+            // beforeinstallprompt Event fired
+            // e.userChoice will return a Promise.
+            e.userChoice.then(function(choiceResult) {
+                console.log(choiceResult.outcome);
+                if(choiceResult.outcome == 'dismissed') {
+                    console.log('User cancelled home screen install');
+                }
+                else {
+                    console.log('User added to home screen');
+                }
+            });
+        });
+
+        if('serviceWorker' in navigator){
+            window.addEventListener('load', function() {
+                navigator.serviceWorker
+                    .register('/service-worker.js')
+                    .then(function(){
+                        console.log('Service Worker 註冊成功');
+                    }).catch(function(error) {
+                    console.log('Service worker 註冊失敗:', error);
+                });
+            });
+        } else {
+            console.log('瀏覽器不支援');
+        }
+
+    </script>
 </body>
 </html>
